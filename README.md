@@ -29,6 +29,8 @@ Just include `motd` in your node's `run_list`:
 }
 ```
 
+ssh login:
+
 ```sh
 $ ssh myserver.com
 Last login: Wed Dec 25 00:00:00 2099 from 192.168.1.1
