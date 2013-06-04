@@ -14,17 +14,15 @@ Just include `motd` in your node's `run_list`:
   "run_list": [
     "recipe[motd]"
   ],
-  "override_attributes": {
-    "motd": {
-        "header": "
+  "motd": {
+    "header": "
    __  _______  _________
   /  |/  / __ \/_  __/ _ \
  / /|_/ / /_/ / / / / // /
 /_/  /_/\____/ /_/ /____/
 ",
-        "footer": "
- (c) MOTD",
-    }
+    "footer": "
+ (c) MOTD"
   }
 }
 ```
