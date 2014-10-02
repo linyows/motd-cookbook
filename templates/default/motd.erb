@@ -1,4 +1,3 @@
-<%= node['motd']['header'] %>
 Chef-Client - <%= node.name %>
 Hostname: <%= node['cloud'] ? node['cloud']['public_hostname'] : node['fqdn'] %>
 <% if !Chef::Config[:solo] -%>
@@ -12,4 +11,3 @@ Roles: <%= node['roles'].join(', ') %>
 <% if node['tags'] && !node['tags'].empty? -%>
 Tags: <%= node['tags'].join(', ') -%>
 <% end -%>
-<%= node['motd']['footer'] %>
