@@ -1,4 +1,12 @@
-<%= node['motd']['header'] %>
+<%= "\033[34m" -%>
+   __  _______  _________
+  /  |/  / __ \/_  __/ _ \
+ / /|_/ / /_/ / / / / // /
+/_/  /_/\____/ /_/ /____/
+
+https://github.com/linyows/motd-cookbook
+<%= "\033[0m" -%>
+
 Chef-Client - <%= node.name %>
 Hostname: <%= node['cloud'] ? node['cloud']['public_hostname'] : node['fqdn'] %>
 <% if !Chef::Config[:solo] -%>
@@ -8,8 +16,11 @@ Chef Server: <%= Chef::Config[:chef_server_url] %>
 Environment: <%= node.chef_environment %>
 <% end -%>
 Last Run: <%= ::Time.now %>
+<% unless node['roles'].empty? -%>
 Roles: <%= node['roles'].join(', ') %>
+<% end -%>
 <% if node['tags'] && !node['tags'].empty? -%>
 Tags: <%= node['tags'].join(', ') -%>
 <% end -%>
-<%= node['motd']['footer'] %>
+
+(c) MOTD

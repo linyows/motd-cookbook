@@ -3,6 +3,9 @@ Motd Cookbook
 
 This cookbook makes your motd.
 
+[![Build Status](https://travis-ci.org/linyows/motd-cookbook.svg?branch=master)][travis]
+[travis]: http://travis-ci.org/linyows/motd-cookbook
+
 Usage
 -----
 
@@ -15,17 +18,12 @@ Just include `motd` in your node's `run_list`:
     "recipe[motd]"
   ],
   "motd": {
-    "header": "
-   __  _______  _________
-  /  |/  / __ \/_  __/ _ \
- / /|_/ / /_/ / / / / // /
-/_/  /_/\____/ /_/ /____/
-",
-    "footer": "
- (c) MOTD"
+    "cookbook": "mycookbook"
   }
 }
 ```
+
+edit: cookbooks/mycookbook/template/default/motd.erb
 
 ssh login:
 
@@ -38,10 +36,12 @@ Last login: Wed Dec 25 00:00:00 2099 from 192.168.1.1
  / /|_/ / /_/ / / / / // /
 /_/  /_/\____/ /_/ /____/
 
+https://github.com/linyows/motd-cookbook
+
 Chef-Client - myserver.com
 Hostname: myserver.com
 Last Run: 2099-12-24 23:59:59 +0900
-Roles: base, ruby, nodejs, web, database, cache, app
+Roles: base, app
 
 (c) MOTD
 ```
