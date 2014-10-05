@@ -3,6 +3,9 @@ Motd Cookbook
 
 This cookbook makes your motd.
 
+[![Build Status](https://travis-ci.org/linyows/motd-cookbook.svg?branch=master)][travis]
+[travis]: http://travis-ci.org/linyows/motd-cookbook
+
 Usage
 -----
 
